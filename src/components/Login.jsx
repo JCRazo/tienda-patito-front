@@ -14,12 +14,10 @@ const Login = () => {
       const response = await axios.post('/api/auth/login', { username, password });
       const token = response.data.token;
       localStorage.setItem('token', token);
-      const decoded = jwtDecode(token); // Usar jwtDecode aquí
-      // Guardar el nombre del cliente en el estado o contexto si es necesario
+      const decoded = jwtDecode(token); 
       navigate('/registrar-pedido');
     } catch (error) {
       console.error("Error during login", error);
-      // Manejar errores de autenticación
     }
   };
 

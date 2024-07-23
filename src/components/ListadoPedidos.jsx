@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const ListadoPedidos = () => {
   const [pedidos, setPedidos] = useState([]);
-  const cliente = "nombre_del_cliente"; // Obtener este valor desde el estado de autenticación
+  const cliente = "nombre_del_cliente";
 
   useEffect(() => {
     const obtenerPedidos = async () => {
